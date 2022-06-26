@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barre de navigation</title>
+</head>
+
+<body>
+    <Header>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            
+            header {
+                background-color: #f8f9fa;
+            }
+            
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+                height: 3rem;
+            }
+            
+            .nav__link {
+                text-decoration: none;
+                padding: 0 1rem;
+                color: #000000;
+            }
+            
+            .container {
+                max-width: 80rem;
+            }
+            
+            .nav__dropdown {
+                display: inline-block;
+                position: relative;
+            }
+            
+            .nav__link--dropdown::after {
+                content: "";
+                background-image: url("Arrow-down.svg");
+                background-size: 1rem 1rem;
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                top: 1px;
+                right: -5px;
+            }
+        </style>
+        <nav class="nav container">
+            <a class="nav__brand">Navbar</a>
+            <div class="nav__container">
+                <a href="" class="nav__link">Home</a>
+                <a href="" class="nav__link">Link</a>
+                <div class="nav__dropdown">
+                    <a href="" class="nav__link nav__link--dropdown">Dropdown</a>
+                </div>
+            </div>
+        </nav>
+    </Header>
+</body>
+
+</html>
